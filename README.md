@@ -7,7 +7,9 @@
    a) Before bringing up the compose file, create a new directory named MongoDB inside the /root directory so hat the host machine will be mapped locally with the volume present inside the MongoDB container. 
    
    b) The username and password for the Mongo-Express UI are:-
+      
       Username : AT&T
+      
       Password : TangoYankee
 
 3. Shell script: This shell script accepts the name of the file and it's path as the input from the user and verifies if the file exists in the specified path, if not creates a new file in the same path with the aforementioned file name.
