@@ -3,7 +3,9 @@
 1. Dockerfile : This dockerfile is used to install vim and git using nginx as a base image.
 
 2. Docker-compose file : This docker-compose file is used to set up a mongoDB container which is linked to a mongo-express container with the help of bridge network in the host machine. 
+   
    a) Before bringing up the compose file, create a new directory named MongoDB inside the /root directory to make sure that the host machine is mapped locally with the volume present inside the MongoDB container. 
+   
    b) The username and password for the Mongo-Express UI are:-
       Username : AT&T
       Password : TangoYankee
