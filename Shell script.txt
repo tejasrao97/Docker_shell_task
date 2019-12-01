@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo "Please enter the file name including it's path"
+read filename
+echo
+
+if [ -e "$filename" ]
+    then
+    echo "The filename which you entered exits"
+    else
+    echo "The filename which you entered doesn't exsit, do you wish to create it (y/n)"
+    read choice
+    if ["$choice" == y ]
+        then
+        touch $filename
+        else
+        echo "Thankyou bye"
+    fi
+fi
