@@ -1,6 +1,7 @@
 version : '3'
 
 services :
+
   mongo-express :
     container_name : task2mongoexp
     image : mongo-express
@@ -29,7 +30,10 @@ services :
       - "/root/MongoDB:/data/db"
     networks :
       - mongo-exp-mongo
-
+      
+volumes :
+    MongoDB:
+    
 networks :
     mongo-exp-mongo :
       driver : bridge
