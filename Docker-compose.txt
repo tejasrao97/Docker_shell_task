@@ -7,33 +7,38 @@ services :
     image : mongo-express
     ports :
       - "8081:8081"
+      
     environment :
       ME_CONFIG_BASICAUTH_USERNAME : AT&T
       ME_CONFIG_BASICAUTH_PASSWORD : TangoYankee
       ME_CONFIG_MONGODB_PORT : 27017
       ME_CONFIG_MONGODB_ADMINUSERNAME : POTUS
       ME_CONFIG_MONGODB_ADMINPASSWORD : StingRay
-    links :
-      - mongo
+      
     networks :
       - mongo-exp-mongo
 
   mongo :
     container_name : task2mongo
     image : mongo
+    
     environment :
       MONGO_INITDB_ROOT_USERNAME : POTUS
       MONGO_INITDB_ROOT_PASSWORD : StingRay
+      
     ports :
       - "27017:27017"
+      
     volumes :
-      - "/root/MongoDB:/data/db"
+      - "/var/lib/docker/volumes/MongDB/_data:/data/db"
+      
     networks :
       - mongo-exp-mongo
       
 volumes :
-    MongoDB:
-    
+    MongoDB :
+        external : True
+        
 networks :
     mongo-exp-mongo :
       driver : bridge
