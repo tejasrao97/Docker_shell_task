@@ -7,13 +7,15 @@
    
    a) Before bringing up the compose file:
    
-         i)  Create a custom Volume and mount the volume with the required container.
-         ii) Create a custom bridged network and link both the containers to this network.
+      i)  Create a custom Volume and mount the volume with the required container.
+         
+      ii) Create a custom bridged network and link both the containers to this network.
          
    b) After bringing up the containers:
          
-         i)  Perfom an exec command to get into any one container and ping the other container, and make sure that they can talk to each              other
-         ii) Create a Database and collection in mongo-express UI and add a document into the created collection and verify if the                    document is added into the mongoDB by logging into the mongoshell present inside the mongo container with the below                      mentioned mongo shell credentials
+      i)  Perfom an exec command to get into any one container and ping the other container, and make sure that they can talk to each             other
+         
+      ii) Create a Database and collection in mongo-express UI and add a document into the created collection and verify if the                   document is added into the mongoDB by logging into the mongoshell present inside the mongo container with the below                     mentioned mongo shell credentials
          
    b) The username and password for the Mongo-Express UI are:-
       
