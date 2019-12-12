@@ -5,8 +5,16 @@
 
 2. Docker-compose file : This docker-compose file is used to set up a mongoDB container which is linked to a mongo-express container with the help of bridge network in the host machine. 
    
-   a) Before bringing up the compose file, create a new directory named MongoDB inside the /root directory so that the host machine will be mapped locally with the volume present inside the MongoDB container. 
+   a) Before bringing up the compose file:
    
+         i)  Create a custom Volume and mount the volume with the required container.
+         ii) Create a custom bridged network and link both the containers to this network.
+         
+   b) After bringing up the containers:
+         
+         i)  Perfom an exec command to get into any one container and ping the other container, and make sure that they can talk to each              other
+         ii) Create a Database and collection in mongo-express UI and add a document into the created collection and verify if the                    document is added into the mongoDB by logging into the mongoshell present inside the mongo container with the below                      mentioned mongo shell credentials
+         
    b) The username and password for the Mongo-Express UI are:-
       
           Username : AT&T
