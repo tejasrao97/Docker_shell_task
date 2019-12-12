@@ -13,9 +13,9 @@
          
    b) After bringing up the containers:
          
-      i)  Perfom an exec command to get into any one container and ping the other container, and make sure that they can talk to each             other
+      i)  Perfom an exec command to get into any one container and ping the other container, and make sure that they can talk to each             other.
          
-      ii) Create a Database and collection in mongo-express UI and add a document into the created collection and verify if the                   document is added into the mongoDB by logging into the mongoshell present inside the mongo container with the below                     mentioned mongo shell credentials (vice-versa)
+      ii) Create a Database and collection in mongo-express UI and add a document into the created collection and verify if the                   document is added into the mongoDB by logging into the mongoshell present inside the mongo container with the below                     mentioned mongo shell credentials. (vice-versa)
          
    b) The username and password for the Mongo-Express UI are:-
       
