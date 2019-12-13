@@ -30,7 +30,7 @@ services :
       - "27017:27017"
       
     volumes :
-      - "/var/lib/docker/volumes/MongDB/_data:/data/db"
+      - "MongDB:/data/db"
       
     networks :
       - mongo-exp-mongo
